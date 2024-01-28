@@ -1,10 +1,8 @@
 
 create table if not exists Taco (
-  id identity,
+  id integer not null,
   name varchar(50) not null,
-  taco_order bigint not null,
-  taco_order_key bigint not null,
-  created_at timestamp not null
+  ingredient varchar
 );
 
 create table if not exists Ingredient (
