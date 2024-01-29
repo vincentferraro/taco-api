@@ -2,7 +2,6 @@ package taco.api.com.api.controllers;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
 import taco.api.com.api.repositories.TacoRepository;
 
@@ -31,7 +30,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 
 @Slf4j
-@RestController
+// @RestController
 @RequestMapping(path = "/api/taco", produces = {"application/json","text/xml"} )
 @CrossOrigin(origins="http://tacocloud:8080")
 public class TacoController {

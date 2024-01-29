@@ -1,6 +1,7 @@
 package taco.api.com.api.controllers;
 
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import taco.api.com.api.models.Ingredient;
 import taco.api.com.api.repositories.IngredientRepository;
@@ -17,13 +18,16 @@ import java.util.Optional;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
-@RestController
+// @RestController
 @RequestMapping(path="ingredients", produces={ "application/json","text/xml"})
 @CrossOrigin(origins="http://tacocloud:8080")
 
 public class IngredientController {
     private IngredientRepository ingredientRepo;
 
+    RestTemplate res = new RestTemplate();
+
+    
     IngredientController(IngredientRepository indregientRepo){
         this.ingredientRepo = indregientRepo;
     }

@@ -3,12 +3,12 @@ package taco.api.com.api.models;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
-
-
+import org.springframework.data.rest.core.annotation.RestResource;
 
 import lombok.Data;
 
 @Data
+@RestResource(rel="tacos", path="tacos")
 public class Taco {
     
     
